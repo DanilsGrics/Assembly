@@ -32,7 +32,7 @@ _Start:
            Jne   Not_Zero		;If Ax != 0 jump to "Not_Zero"
 
            Mov Dx, Zero	
-           Jmp Short _Exit ;Else go to Exit
+           Jmp Short _Exit		;Else go to Exit
 
 Not_Zero:
            Jl  Branch_C			;Test if Cx < 0 (if TRUE goes to Branch_C else stays here)
