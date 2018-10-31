@@ -21,7 +21,7 @@ S:
 			Jle Continue			;if Dx>Ax => Ax = Dx
 			Mov Ax, Dx
 Continue:	   
-			Add  Bx, 2
+			Add  Bx, 2				;next two bytes (next element)
 			Loop S
 .exit 0
 end
