@@ -13,10 +13,10 @@ Vector		Dw 2, 7, -1, 16, 15
 N			Equ 5
 
 Start:
-			Xor Ax, Ax					;clear Ax
 			Xor	Bx, Bx					;clean Bx
 			Xor	Si, Si					;clean Si
 			Mov	Cx, N					;iteration counter
+			Mov Ax, Vector				;Ax == Vector[0]
 
 S:
 			Mov	Dx, Vector[Bx][Si]		;save current element to Dx from Vector

@@ -18,12 +18,12 @@ Step		Equ 2
 .386									;cause we use EBx register
 
 Start:
-			Xor Ax, Ax					;clear Ax
+			Mov Ax, Array				;Ax == Array[0]
 			Xor	EBx, EBx				;clear EBx	
 			Mov	Cx, N					;iteration counter
 
 S: 
-			Mov Dx, Array[EBx*Step]		;save current element to Dx from Vector
+			Mov Dx, Array[EBx*Step]		;save current element to Dx from Array
 			Cmp Dx, Ax					;comparison of current element and last biggest
 			Jle Continue				;if Dx>Ax => Ax = Dx
 			Mov Ax, Dx					;save current maximal value to Ax

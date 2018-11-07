@@ -13,7 +13,7 @@ Vector		Dw 2, 7, -1, 16, 15
 N			Equ 5
 
 Start:
-			Xor Ax, Ax				;clear Ax
+			Mov Ax, Vector			;Ax == Vector[0]
 			Xor Bx, Bx				;clear Bx
 			Mov Cx, N				;iteration counter
 
