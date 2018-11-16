@@ -19,24 +19,24 @@ Comment &
 	S Equ Type Matrix
 
 Start:
-	Lea	Di, Vector						;elements of Vector are linked to Di (saving results to this vector)
-	Mov Cx, M							;count of iterations is the same as count of elements in row
-	Xor	Bx, Bx							;clear Bx
+	Lea		Di, Vector					;elements of Vector are linked to Di (saving results to this vector)
+	Mov		Cx, M						;count of iterations is the same as count of elements in row
+	Xor		Bx, Bx						;clear Bx
 
 FirstRowToVector:
-	Mov Ax, Matrix[Bx]					
-	Mov [Di], Ax						;All elements of Vector are same as first row of Matrix
-	Add Bx, S
-	Mov Di, Bx
+	Mov		Ax, Matrix[Bx]					
+	Mov		[Di], Ax					;All elements of Vector are same as first row of Matrix
+	Add		Bx, S
+	Mov		Di, Bx
 
 Loop FirstRowToVector
 
-	Xor	Bx, Bx							;clear Bx
-	Mov Bx, S*M							;to start comparison from the second row
-	Mov	Cx, (N-1)						;Cx = N-1 (= 1) to force comparison except first row
+	Xor		Bx, Bx						;clear Bx
+	Mov		Bx, S*M						;to start comparison from the second row
+	Mov		Cx, (N-1)					;Cx = N-1 (= 1) to force comparison except first row
 
 Rows:
-	Push    Cx							;current Cx (count of iterations) saved to stack
+	Push	Cx							;current Cx (count of iterations) saved to stack
 	Mov		Cx, M						;Cx = (M = 3) same as column count
 	Xor		Si, Si						;clear Si index
 	Xor		Di, Di						;clear Di index
