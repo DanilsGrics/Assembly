@@ -31,8 +31,6 @@ FirstRowToVector:
 
 Loop FirstRowToVector
 
-	Xor		Bx, Bx						;clear Bx
-	Mov		Bx, S*M						;to start comparison from the second row
 	Mov		Cx, (N-1)					;Cx = N-1 (= 1) to force comparison except first row
 
 Rows:
