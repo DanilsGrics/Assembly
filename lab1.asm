@@ -6,7 +6,7 @@ Comment &
 .model tiny
 .code
 .startup
-			Org 100
+			Org 100h
 			Jmp Short _Start
 X			Db   1
 Y			Db   2
